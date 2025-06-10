@@ -5,29 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Atlético Nacional</title>
     <link rel="stylesheet" href="css/estilos.css" />
+    <script>
+      function scrollToSection(id) {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
   </head>
 
   <body>
     <nav>
-      <div class="left">Atlético Nacional</div>
-      <div class="center"></div>
-      <div class="right">Redes Sociales</div>
+      <div class="nav-left">
+        <div class="logo-contenedor">
+          <span class="titulo">Atlético Nacional</span>
+          <img src="images/Logo_Nacional.webp" alt="Logo Atlético Nacional" class="logo-navbar" />
+        </div>
+        <button onclick="scrollToSection('boleteria')">Boletería</button>
+        <button onclick="scrollToSection('camisetas')">Venta de camisetas</button>
+      </div>
+      <div class="nav-right">Redes Sociales</div>
     </nav>
 
     <main>
-      <article>
-      <section class="imagen-cabecera">
-        <img src="images/boleteria_ATL.png" alt="Boletos" />
-      </section>
+      <article id="boleteria">
+        <section class="imagen-cabecera">
+          <img src="images/Aside Boletas.png" alt="Boletos" />
+        </section>
 
-      <section class="imagen-estadio">
-        <img src="images/Estadio.png" alt="Estadio" />
-      </section>
+        <section class="imagen-estadio">
+          <img src="images/Estadio.png" alt="Estadio" />
+        </section>
+      </article>
+
+      <article id="camisetas">
+        <!-- ASIDE CAMISETAS -->
+        <aside class="cabecera-camisetas">
+          <img src="images/camisetas_aside.png" alt="Camisetas Atlético Nacional" />
+          <div class="texto-cabecera">
+            <h2>Camisetas oficiales</h2>
+            <p>Descubre la nueva indumentaria de Atlético Nacional para esta temporada.</p>
+          </div>
+        </aside>
+
+        <!-- SECCIONES DE CAMISETAS -->
+        <section class="imagen-camiseta">
+          <img src="images/c1.jpg" alt="Camiseta Local" />
+          <div class="info-camiseta">
+            <h2>Camiseta Local</h2>
+            <p>$300.000 COP</p>
+            <button>Comprar</button>
+          </div>
+        </section>
+        <section class="imagen-camiseta">
+          <img src="images/c2.png" alt="Camiseta Visitante" />
+          <div class="info-camiseta">
+            <h2>Camiseta Visitante</h2>
+            <p>$250.000 COP</p>
+            <button>Comprar</button>
+          </div>
+        </section>
+        <section class="imagen-camiseta">
+          <img src="images/CamisaTercer.webp" alt="Tercer Camiseta" />
+          <div class="info-camiseta">
+            <h2>Tercer Camiseta</h2>
+            <p>$250.000 COP</p>
+            <button>Comprar</button>
+          </div>
+        </section>
+        <section class="imagen-camiseta">
+          <img src="images/Camiseta Calentamiento.png" alt="Camiseta Entrenamiento" />
+          <div class="info-camiseta">
+            <h2>Camiseta Entrenamiento</h2>
+            <p>$150.000 COP</p>
+            <button>Comprar</button>
+          </div>
+        </section>
+        <section class="imagen-camiseta">
+          <img src="images/Camiseta negra.png" alt="Camiseta Presentación" />
+          <div class="info-camiseta">
+            <h2>Camiseta Presentación</h2>
+            <p>$100.000 COP</p>
+            <button>Comprar</button>
+          </div>
+        </section>
+        <section class="imagen-camiseta">
+          <img src="images/Chaqueta Presentacion.png" alt="Chaqueta Presentación" />
+          <div class="info-camiseta">
+            <h2>Chaqueta Presentación</h2>
+            <p>$350.000 COP</p>
+            <button>Comprar</button>
+          </div>
+        </section>
+      </article>
     </main>
 
     <footer class="footer-banner">
       <img src="images/Aside_ATL.png" alt="Patrocinadores" />
     </footer>
-      </article>
   </body>
 </html>

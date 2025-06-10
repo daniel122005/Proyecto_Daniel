@@ -1,7 +1,11 @@
 :root {
-  --altura-nav: 4rem;
+  --altura-nav: 5rem;
+  --verde-nacional: #009f3c;
+  --verde-oscuro: #007e30;
+  --gris-fondo: #f5f5f5;
 }
 
+/* Reset y base */
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +15,10 @@
 body {
   font-family: "Roboto", sans-serif;
   padding-top: var(--altura-nav);
-  background-color: #f5f5f5;
+  background-color: var(--gris-fondo);
 }
 
+/* NAVBAR */
 nav {
   position: fixed;
   top: 0;
@@ -27,58 +32,185 @@ nav {
   align-items: center;
   padding: 0 1rem;
   z-index: 1000;
-
-  .left,
-  .center,
-  .right {
-    flex: 1;
-    text-align: center;
-  }
 }
 
-main {
-  margin: 0;
-  padding: 0;
-
-  article {
-    margin: 0;
-    padding: 0;
-
-    .imagen-cabecera {
-      width: 100%;
-      background-color: white;
-      text-align: center;
-
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .imagen-estadio {
-      width: 100%;
-      background-color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        display: block;
-        width: 50%;
-        height: auto;
-      }
-    }
-  }
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-footer.footer-banner {
+.logo-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-navbar {
+  height: 2rem;
+  margin-top: 0.3rem;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav button {
+  background-color: var(--verde-nacional);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: var(--verde-oscuro);
+}
+
+.nav-right {
+  text-align: right;
+}
+
+/* ARTICLE GENERAL */
+article {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1200px;
+  width: 95%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* BOLETERÍA */
+#boleteria .imagen-cabecera img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#boleteria .imagen-estadio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+#boleteria .imagen-estadio img {
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* CABECERA CAMISETAS */
+.cabecera-camisetas {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cabecera-camisetas img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.cabecera-camisetas .texto-cabecera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.cabecera-camisetas .texto-cabecera h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cabecera-camisetas .texto-cabecera p {
+  font-size: 1.1rem;
+}
+
+/* CAMISETAS */
+#camisetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#camisetas .imagen-camiseta {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  width: 280px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#camisetas .imagen-camiseta img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#camisetas .info-camiseta h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+#camisetas .info-camiseta p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+#camisetas .info-camiseta button {
+  background-color: var(--verde-nacional);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#camisetas .info-camiseta button:hover {
+  background-color: var(--verde-oscuro);
+}
+
+/* FOOTER */
+.footer-banner {
   background-color: #003300;
   text-align: center;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+  padding: 1rem 0;
+  margin-top: 3rem;
 }
+
+.footer-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
